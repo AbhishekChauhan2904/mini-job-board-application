@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`/api/jobs?search=${search}`)
+      .get(`https://mini-job-board-application.onrender.com/api/jobs?search=${search}`)
       .then((res) => setJobs(res.data))
       .catch((err) => {
         console.error("Error fetching jobs:", err);
