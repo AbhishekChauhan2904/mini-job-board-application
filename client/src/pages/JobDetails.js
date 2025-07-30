@@ -9,9 +9,9 @@ export default function JobDetails() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get(`/api/jobs/${id}`)
-      .then((res) => {
+ axios
+       .get(`https://mini-job-board-application.onrender.com/api/jobs/${id}`)
+       .then((res) => {
         setJob(res.data);
         setLoading(false);
       })
