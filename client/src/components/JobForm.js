@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import './styles.css';
+import "./styles.css";
 
 export default function JobForm() {
   const [form, setForm] = useState({
@@ -8,7 +8,7 @@ export default function JobForm() {
     company: "",
     type: "",
     location: "",
-    description: ""
+    description: "",
   });
 
   const [error, setError] = useState("");
@@ -24,25 +24,34 @@ export default function JobForm() {
     setSuccess("");
     setError("");
 
-    const isEmptyField = Object.values(form).some((value) => value.trim() === "");
+    const isEmptyField = Object.values(form).some(
+      (value) => value.trim() === ""
+    );
     if (isEmptyField) {
       setError("Please fill in all fields.");
       return;
     }
 
     try {
-      const res = await axios.post("https://mini-job-board-application.onrender.com/api/jobs", form)
-     setSuccess("Job posted successfully!");
+      await axios.post(
+        "https://mini-job-board-application.onrender.com/api/jobs",
+        form
+      );
+      setSuccess("Job posted successfully!");
       setForm({
         title: "",
         company: "",
         type: "",
         location: "",
-        description: ""
+        description: "",
       });
     } catch (err) {
       if (err.response) {
-        setError(`Error ${err.response.status}: ${err.response.data.error || "Server error"}`);
+        setError(
+          `Error ${err.response.status}: ${
+            err.response.data.error || "Server error"
+          }`
+        );
       } else if (err.request) {
         setError("No response from server. Is the backend running?");
       } else {
@@ -56,8 +65,6 @@ export default function JobForm() {
       className="job-form max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg"
       onSubmit={handleSubmit}
     >
-
-
       {["title", "company", "location", "description"].map((field) => (
         <input
           key={field}
