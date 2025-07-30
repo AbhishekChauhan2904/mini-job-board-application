@@ -5,7 +5,7 @@ export default function JobCard({ job }) {
   return (
     <div className="job-card shadow-lg border rounded-lg p-4 bg-white hover:shadow-xl transition-all">
       <img
-        src="https://via.placeholder.com/100"
+       src="https://drive.google.com/uc?export=view&id=1lo4gd87Cgh2gTOBNwbwVm7tuzfmheoIc"
         alt="Company"
         className="w-16 h-16 rounded-full mb-2"
       />
