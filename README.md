@@ -23,10 +23,19 @@ A minimal, full-stack job posting platform where users can post job listings inc
 ## 📁 Project Structure
 client -- frontend
 server -- backend
+
+
+
+
 1.Start the Backend
 cd server
 npm install
 npm run dev
+
+
+
+
+
 2. Start the Frontend
 cd client
 npm install
