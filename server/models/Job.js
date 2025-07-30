@@ -6,6 +6,7 @@ const jobSchema = new mongoose.Schema({
   type: String,
   location: String,
   description: String,
+  imageUrl: String,
   createdAt: { type: Date, default: Date.now }
 });
 
