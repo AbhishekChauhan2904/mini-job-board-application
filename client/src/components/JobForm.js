@@ -31,8 +31,8 @@ export default function JobForm() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5050/api/jobs", form);
-      setSuccess("Job posted successfully!");
+      const res = await axios.post("https://mini-job-board-application.onrender.com/api/jobs", form)
+     setSuccess("Job posted successfully!");
       setForm({
         title: "",
         company: "",
