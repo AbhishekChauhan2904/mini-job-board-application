@@ -73,14 +73,14 @@ app.get('/api/jobs/:id', async (req, res) => {
 app.post('/api/jobs', async (req, res) => {
   try {
     console.log("Data received:", req.body);
-    const { title, company, type, location, description } = req.body;
+    const { title, company, type, location, description,  imageUrl } = req.body;
 
     // Basic validation
     if (!title || !company || !type || !location || !description) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
-    const newJob = new Job({ title, company, type, location, description });
+    const newJob = new Job({ title, company, type, location, description, imageUrl});
     await newJob.save();
     res.status(201).json(newJob);
   } catch (err) {
