@@ -1,0 +1,5 @@
+body { font-family: Arial; margin: 0; padding: 0; }
+.nav { display: flex; gap: 1rem; padding: 1rem; background: #8274e1; }
+.job-card, .job-details { border: 1px solid #ccc; padding: 1rem; margin: 1rem; border-radius: 8px; }
+.job-form input, .job-form select, .job-form button { display: block; margin: 0.5rem 0; }
+.spinner { text-align: center; font-size: 1.5rem; padding: 2rem; }

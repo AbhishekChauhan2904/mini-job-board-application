@@ -1,0 +1,24 @@
+.job-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+.job-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.job-form input, .job-form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.spinner {
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0.5; }
+}

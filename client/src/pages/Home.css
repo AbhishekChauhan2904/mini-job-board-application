@@ -1,0 +1,47 @@
+/* Main container */
+.home-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Page Title */
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Search bar */
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  border-color: #007bff;
+}
+
+/* Jobs grid layout */
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Empty state text */
+.no-jobs {
+  color: #999;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
