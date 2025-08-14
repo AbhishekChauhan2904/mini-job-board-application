@@ -3,7 +3,6 @@ import './styles.css';
 
 export default function JobCard({ job }) {
   return (
-    <div className="job-card shadow-lg border rounded-lg p-4 bg-white hover:shadow-xl transition-all">
   <div className="job-card shadow-lg border rounded-lg p-4 bg-white hover:shadow-xl transition-all">
     <img
   src={job.imageUrl || "/default/image.png"}
