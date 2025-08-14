@@ -8,6 +8,14 @@
 .job-card:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+.job-image {
+  width: 80px;           
+  height: 80px;          
+  border-radius: 50%;    
+  object-fit: cover;     
+  margin-bottom: 8px;   
+  border: 2px solid #eee; 
+}
 .job-form input, .job-form select {
   width: 100%;
   margin-bottom: 10px;
