@@ -4,11 +4,12 @@ import './styles.css';
 export default function JobCard({ job }) {
   return (
     <div className="job-card shadow-lg border rounded-lg p-4 bg-white hover:shadow-xl transition-all">
-      <img
-       src="https://drive.google.com/uc?export=view&id=1lo4gd87Cgh2gTOBNwbwVm7tuzfmheoIc"
-        alt="Company"
-        className="w-16 h-16 rounded-full mb-2"
-      />
+  <div className="job-card shadow-lg border rounded-lg p-4 bg-white hover:shadow-xl transition-all">
+    <img
+  src={job.imageUrl || "/default/image.png"}
+  alt={job.company || "Company"}
+className="job-image"
+/>
       <h3 className="text-lg font-semibold">{job.title}</h3>
       <p className="text-gray-600">
         <strong>{job.company}</strong>
